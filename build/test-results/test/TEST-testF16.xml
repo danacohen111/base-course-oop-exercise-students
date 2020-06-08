@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testF16" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-08T15:01:56" hostname="HP-PC" time="0.002">
+<testsuite name="testF16" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-06-08T16:19:15" hostname="HP-PC" time="0.002">
   <properties/>
-  <testcase name="testBda" classname="testF16" time="0.0"/>
+  <testcase name="testBda" classname="testF16" time="0.001"/>
   <testcase name="testIntelligenceNotImplemented" classname="testF16" time="0.0"/>
   <testcase name="testAttack" classname="testF16" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

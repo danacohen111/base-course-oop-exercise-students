@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testKochav" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-06-08T15:01:56" hostname="HP-PC" time="0.002">
+<testsuite name="testKochav" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-06-08T16:19:15" hostname="HP-PC" time="0.003">
   <properties/>
-  <testcase name="testCollectIntelligence" classname="testKochav" time="0.001"/>
+  <testcase name="testCollectIntelligence" classname="testKochav" time="0.0"/>
   <testcase name="testBda" classname="testKochav" time="0.0"/>
   <testcase name="testRepairZik" classname="testKochav" time="0.0"/>
   <testcase name="testAttack" classname="testKochav" time="0.0"/>
