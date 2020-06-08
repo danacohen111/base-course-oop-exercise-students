@@ -7,7 +7,18 @@ import Entities.Coordinates;
 public class IntelligenceMission extends Mission{
     private String region;
 
-    public IntelligenceMission(Coordinates missionCoordinates) {
+
+    public IntelligenceMission(String region, Coordinates missionCoordinates) {
         super(missionCoordinates);
+        this.region = region;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    @Override
+    public String getDataForMission() {
+        return this.getRegion();
     }
 }

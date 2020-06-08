@@ -7,7 +7,17 @@ import Entities.Coordinates;
 public class BdaMission extends Mission{
     private String objective;
 
-    public BdaMission(Coordinates missionCoordinates) {
+    public String getObjective() {
+        return objective;
+    }
+
+    public BdaMission(String objective, Coordinates missionCoordinates) {
         super(missionCoordinates);
+        this.objective = objective;
+    }
+
+    @Override
+    public String getDataForMission() {
+        return this.getObjective();
     }
 }

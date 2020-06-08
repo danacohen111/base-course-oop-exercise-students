@@ -1,5 +1,5 @@
 package AerialVehicles;
 
-public interface AerialAttackVehicle {
-    abstract void attack();
+public interface AerialAttackVehicle extends AerialVehicleService{
+    abstract String attack();
 }

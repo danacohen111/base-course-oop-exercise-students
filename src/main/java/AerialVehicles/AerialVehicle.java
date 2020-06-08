@@ -1,47 +1,58 @@
 package AerialVehicles;
 
-import Entities.Coordinates;
 import Missions.Mission;
-import Missions.MissionTypeException;
 
 
 public abstract class AerialVehicle implements AerialVehicleService{
     private String pilotName;
     private Mission mission;
     private int FlightHoursAfterRepair;
-    private boolean isReadyToFly;;
+    private boolean readyToFly;
 
     public AerialVehicle(String pilotName, Mission mission, int flightHoursAfterRepair, boolean isReadyToFly) {
         this.pilotName = pilotName;
         this.mission = mission;
         FlightHoursAfterRepair = flightHoursAfterRepair;
-        this.isReadyToFly = isReadyToFly;
+        this.readyToFly = isReadyToFly;
     }
 
+
+    public int getHoursOfFlightSinceLastRepair() {
+        return FlightHoursAfterRepair;
+    }
+
+    public void setHoursOfFlightSinceLastRepair(int flightHoursAfterRepair) {
+        FlightHoursAfterRepair = flightHoursAfterRepair;
+    }
+
+    public String getPilotName() {
+        return pilotName;
+    }
+
+    public Mission getMission() {
+        return mission;
+    }
+
+    public void changeMission(Mission mission) {
+        this.mission = mission;
+    }
+
+    public void setReadyToFly(boolean readyToFly) {
+        this.readyToFly = readyToFly;
+    }
+
+    @Override
+    public void flyTo(){
+        System.out.println("Flying to: "+this.getMission().getMissionCoordinates().getCoordinatesDescription());
+    }
+    @Override
     public void land() {
         System.out.println("Landing");
     }
 
-    abstract public void check();
-
-    protected void repair() {
+    @Override
+    public void repair() {
         this.setReadyToFly(true);
-        this.setFlightHoursAfterRepair(0);
-    }
-
-    public boolean isReadyToFly() {
-        return isReadyToFly;
-    }
-
-    public int getFlightHoursAfterRepair() {
-        return FlightHoursAfterRepair;
-    }
-
-    private void setFlightHoursAfterRepair(int flightHoursAfterRepair) {
-        FlightHoursAfterRepair = flightHoursAfterRepair;
-    }
-
-    private void setReadyToFly(boolean readyToFly) {
-        isReadyToFly = readyToFly;
+        this.setHoursOfFlightSinceLastRepair(0);
     }
 }
